@@ -1,0 +1,102 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    margin-top: 5vh;
+  }
+
+  100% {
+    opacity: 1;
+    margin-top: 0vh;
+  }
+}
+
+.friendCard {
+  background-color: black;
+  width: -moz-fit-content;
+  max-width: 100%;
+  margin-bottom: 5vh;
+  padding: 20px 80px;
+  border-radius: 50px;
+  transition: opacity 1s;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  display: flex;
+  flex-flow: column;
+  min-width: 35%;
+  align-items: center;
+  min-width: 42vw;
+}
+
+@keyframes scrub {
+  0% {
+    margin-left: -10vw;
+  }
+
+  100% {
+    margin-left: 10vw;
+  }
+}
+
+.loading {
+  animation-name: scrub;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  animation-timing-function: ease-in-out;
+}
+
+.buttonsContainer {
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hugRight {
+  align-self: flex-end;
+  margin: 1vw;
+}
+
+.removeFriend {
+  transform: scale(0.7);
+  max-width: 50%;
+}
