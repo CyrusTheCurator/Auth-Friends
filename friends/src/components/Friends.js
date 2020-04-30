@@ -29,7 +29,7 @@ function Friends(props) {
 
   const getData = () => {
     axiosWithAuth()
-      .get("http://localhost:5000/api/friends")
+      .get("https://auth-friends-backend-josh.herokuapp.com/api/friends")
       .then((res) => {
         console.log("data on server response ", res);
         setFriends([...res.data]);
@@ -40,7 +40,10 @@ function Friends(props) {
 
   const postFriend = () => {
     axiosWithAuth()
-      .post("http://localhost:5000/api/friends", newFriend)
+      .post(
+        "https://auth-friends-backend-josh.herokuapp.com/api/friends",
+        newFriend
+      )
       .then((res) => {
         setFriends([...res.data]);
         loadingToggler(res);
@@ -57,7 +60,9 @@ function Friends(props) {
 
   const deleteFriend = (delFriend) => {
     axiosWithAuth()
-      .delete(`http://localhost:5000/api/friends/${delFriend.id}`)
+      .delete(
+        `https://auth-friends-backend-josh.herokuapp.com/api/friends/${delFriend.id}`
+      )
       .then((res) => {
         setFriends([...res.data]);
         loadingToggler(res);
