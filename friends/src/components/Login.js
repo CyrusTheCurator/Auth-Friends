@@ -15,7 +15,10 @@ function Login(props) {
   const login = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:5000/api/login", credentials)
+      .post(
+        "https://auth-friends-backend-josh.herokuapp.com/api/login",
+        credentials
+      )
       .then((res) => {
         console.log("Login successful", res);
         localStorage.setItem("token", res.data.payload.token);
