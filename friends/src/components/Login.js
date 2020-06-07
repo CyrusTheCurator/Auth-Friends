@@ -30,8 +30,8 @@ function Login(props) {
 
   return (
     <>
-      <p>Registration doesn't work yet. Try this</p>
-      <p>Username: Josh, Password: joshcodes</p>
+      <p className="helperText">Registration doesn't work yet. Try this</p>
+      <p className="helperText">Username: Josh, Password: joshcodes</p>
 
       <form className="loginForm" onSubmit={login}>
         Do you have friends? Log in to find out.
