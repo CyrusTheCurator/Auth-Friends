@@ -148,3 +148,7 @@ input:invalid {
   animation-fill-mode: forwards;
   width: 50vw;
 }
+
+.helperText {
+  font-size: calc(1rem);
+}
